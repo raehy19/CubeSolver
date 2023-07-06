@@ -6,7 +6,7 @@
 #include <stdio.h>
 
 typedef enum {
-	a,
+	a = 1,
 	b,
 	c,
 	d,

@@ -34,23 +34,29 @@ void	init_cube(t_cube_data *cube)
 	cube->RIGHT_d_b = f;
 }
 
+void	print_cube(t_cube_data *cube)
+{
+	printf("CUBE status :\n");
+	printf("UP :\n%d %d\n%d %d\n",cube->UP_l_b, cube->UP_r_b, cube->UP_l_f, cube->UP_r_f);
+	printf("DOWN :\n%d %d\n%d %d\n",cube->DOWN_l_b, cube->DOWN_r_b, cube->DOWN_l_f, cube->DOWN_r_f);
+	printf("FRONT :\n%d %d\n%d %d\n",cube->FRONT_l_u, cube->FRONT_r_u, cube->FRONT_l_d, cube->FRONT_r_d);
+	printf("BACK :\n%d %d\n%d %d\n",cube->BACK_l_u, cube->BACK_r_u, cube->BACK_l_d, cube->BACK_r_d);
+	printf("LEFT :\n%d %d\n%d %d\n",cube->LEFT_u_f, cube->LEFT_u_b, cube->LEFT_d_f, cube->LEFT_d_b);
+	printf("RIGHT :\n%d %d\n%d %d\n",cube->RIGHT_u_f, cube->RIGHT_u_b, cube->RIGHT_d_f, cube->RIGHT_d_b);
+}
+
 int	main(int argc, char **argv)
 {
-	if (argc < 2)
-		return (1) ;
-
-	printf("input :\n") ;
-	for (int i = 1; i < argc ; ++i) {
-		printf("%d\n", atoi(argv[i]));
-	}
-
 	t_cube_data	*cube;
 
 	cube = malloc(sizeof(t_cube_data));
 	if (!cube)
 		return (2);
 	init_cube(cube);
-
+	print_cube(cube);
 	free(cube);
+
+	(void)argc;
+	(void)argv;
 	return (0);
 }
