@@ -1,9 +1,9 @@
 
-#ifndef CUBESOLVER_H
-# define CUBESOLVER_H
+#pragma once
+#ifndef CUBESOLVER_HPP
+# define CUBESOLVER_HPP
 
-#include <stdlib.h>
-#include <stdio.h>
+#include <iostream>
 
 typedef enum {
 	a = 1,

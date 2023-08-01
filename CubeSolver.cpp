@@ -1,5 +1,5 @@
 
-#include "CubeSolver.h"
+#include "CubeSolver.hpp"
 
 void	init_cube(t_cube_data *cube)
 {

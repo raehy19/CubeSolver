@@ -1,20 +1,22 @@
+
+
 NAME := solve
 
-CC := cc
-CFLAGS := -Wall -Wextra -Werror -MMD -MP -O3
+CXX := c++
+CXXFLAGS := -Wall -Wextra -Werror -MMD -MP -O3
 RM := rm -f
 
 all : $(NAME)
 
 SRCS := \
-	CubeSolver.c \
-
+	Cube.cpp \
+	main.cpp
 
 OBJS := \
-	$(SRCS:.c=.o)
+	$(SRCS:.cpp=.o)
 
 DEPS := \
-	$(SRCS:.c=.d)
+	$(SRCS:.cpp=.d)
 
 -include $(DEPS)
 
@@ -29,9 +31,9 @@ re : fclean
 	make all
 
 $(NAME) : $(OBJS)
-	$(CC) $(CFLAGS) $^ -o $@
+	$(CXX) $(CXXFLAGS) $^ -o $@
 
 %.o : %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 .PHONY : all clean fclean re
