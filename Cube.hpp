@@ -18,6 +18,7 @@ typedef enum {
 
 class Cube {
 private:
+	// color
 	t_color _up_l_b;
 	t_color _up_r_b;
 	t_color _up_l_f;
@@ -42,6 +43,38 @@ private:
 	t_color _right_u_b;
 	t_color _right_d_f;
 	t_color _right_d_b;
+
+	// spin`
+	void _spin_u_c(void);
+
+	void _spin_u_cc(void);
+
+	void _spin_d_c(void);
+
+	void _spin_d_cc(void);
+
+	void _spin_f_c(void);
+
+	void _spin_f_cc(void);
+
+	void _spin_b_c(void);
+
+	void _spin_b_cc(void);
+
+	void _spin_l_c(void);
+
+	void _spin_l_cc(void);
+
+	void _spin_r_c(void);
+
+	void _spin_r_cc(void);
+
+	void _spin_u2(void);
+
+	void _spin_d2(void);
+
+	void _spin_l2(void);
+
 public:
 	// Orthodox Canonical
 	Cube();
@@ -51,6 +84,15 @@ public:
 	Cube &operator=(const Cube &cube);
 
 	~Cube();
+
+	// Display
+	void Display(void);
+
+	// Spin Select
+	void Spin(std::string direction);
+
+	// Check
+	bool Check(void);
 
 };
 
