@@ -1,6 +1,7 @@
 
 #include "Cube.hpp"
 
+// Orthodox Canonical
 Cube::Cube() :
 		_up_l_b(a),
 		_up_r_b(a),
@@ -62,4 +63,22 @@ Cube &Cube::operator=(const Cube &cube) {
 }
 
 Cube::~Cube() {
+}
+
+// Display
+void Cube::Display() {
+	std::cout << "::::: CUBE status :::::" << std::endl;
+	std::cout << "UP :    "
+			  << this->_up_l_b << this->_up_r_b << this->_up_l_f << this->_up_r_f << std::endl;
+	std::cout << "DOWN :  "
+			  << this->_down_l_b << this->_down_r_b << this->_down_l_f << this->_down_r_f << std::endl;
+	std::cout << "FRONT : "
+			  << this->_front_l_u << this->_front_r_u << this->_front_l_d << this->_front_r_d << std::endl;
+	std::cout << "BACK :  "
+			  << this->_back_l_u << this->_back_r_u << this->_back_l_d << this->_back_r_d << std::endl;
+	std::cout << "LEFT :  "
+			  << this->_left_u_f << this->_left_u_b << this->_left_d_f << this->_left_d_b << std::endl;
+	std::cout << "RIGHT : "
+			  << this->_right_u_f << this->_right_u_b << this->_right_d_f << this->_right_d_b << std::endl;
+	std::cout << ":::::::::::::::::::::::" << std::endl;
 }
