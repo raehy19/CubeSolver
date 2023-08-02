@@ -82,3 +82,340 @@ void Cube::Display() {
 			  << this->_right_u_f << this->_right_u_b << this->_right_d_f << this->_right_d_b << std::endl;
 	std::cout << ":::::::::::::::::::::::" << std::endl;
 }
+
+// Spin
+void Cube::_spin_u_c() {
+	t_color temp_up_l_b = this->_up_l_b;
+	t_color temp_up_r_b = this->_up_r_b;
+	t_color temp_up_l_f = this->_up_l_f;
+	t_color temp_up_r_f = this->_up_r_f;
+	t_color temp_front_l_u = this->_front_l_u;
+	t_color temp_front_r_u = this->_front_r_u;
+	t_color temp_left_u_f = this->_left_u_f;
+	t_color temp_left_u_b = this->_left_u_b;
+	t_color temp_back_l_u = this->_back_l_u;
+	t_color temp_back_r_u = this->_back_r_u;
+	t_color temp_right_u_f = this->_right_u_f;
+	t_color temp_right_u_b = this->_right_u_b;
+
+	this->_up_l_b = temp_up_l_f;
+	this->_up_r_b = temp_up_l_b;
+	this->_up_l_f = temp_up_r_f;
+	this->_up_r_f = temp_up_r_b;
+	this->_front_l_u = temp_right_u_f;
+	this->_front_r_u = temp_right_u_b;
+	this->_left_u_f = temp_front_l_u;
+	this->_left_u_b = temp_front_r_u;
+	this->_back_l_u = temp_left_u_f;
+	this->_back_r_u = temp_left_u_b;
+	this->_right_u_f = temp_back_r_u;
+	this->_right_u_b = temp_back_l_u;
+}
+
+void Cube::_spin_u_cc() {
+	t_color temp_up_l_b = this->_up_l_b;
+	t_color temp_up_r_b = this->_up_r_b;
+	t_color temp_up_l_f = this->_up_l_f;
+	t_color temp_up_r_f = this->_up_r_f;
+	t_color temp_front_l_u = this->_front_l_u;
+	t_color temp_front_r_u = this->_front_r_u;
+	t_color temp_left_u_f = this->_left_u_f;
+	t_color temp_left_u_b = this->_left_u_b;
+	t_color temp_back_l_u = this->_back_l_u;
+	t_color temp_back_r_u = this->_back_r_u;
+	t_color temp_right_u_f = this->_right_u_f;
+	t_color temp_right_u_b = this->_right_u_b;
+
+	this->_up_l_b = temp_up_r_b;
+	this->_up_r_b = temp_up_r_f;
+	this->_up_l_f = temp_up_l_b;
+	this->_up_r_f = temp_up_l_f;
+	this->_front_l_u = temp_left_u_b;
+	this->_front_r_u = temp_left_u_f;
+	this->_left_u_f = temp_back_l_u;
+	this->_left_u_b = temp_back_r_u;
+	this->_back_l_u = temp_right_u_b;
+	this->_back_r_u = temp_right_u_f;
+	this->_right_u_f = temp_front_l_u;
+	this->_right_u_b = temp_front_r_u;
+}
+
+void Cube::_spin_d_c() {
+	t_color temp_down_l_b = this->_down_l_b;
+	t_color temp_down_r_b = this->_down_r_b;
+	t_color temp_down_l_f = this->_down_l_f;
+	t_color temp_down_r_f = this->_down_r_f;
+	t_color temp_front_l_d = this->_front_l_d;
+	t_color temp_front_r_d = this->_front_r_d;
+	t_color temp_left_d_f = this->_left_d_f;
+	t_color temp_left_d_b = this->_left_d_b;
+	t_color temp_back_l_d = this->_back_l_d;
+	t_color temp_back_r_d = this->_back_r_d;
+	t_color temp_right_d_f = this->_right_d_f;
+	t_color temp_right_d_b = this->_right_d_b;
+
+	this->_down_l_b = temp_down_r_b;
+	this->_down_r_b = temp_down_r_f;
+	this->_down_l_f = temp_down_l_b;
+	this->_down_r_f = temp_down_l_f;
+	this->_front_l_d = temp_left_d_b;
+	this->_front_r_d = temp_left_d_f;
+	this->_left_d_f = temp_back_l_d;
+	this->_left_d_b = temp_back_r_d;
+	this->_back_l_d = temp_right_d_b;
+	this->_back_r_d = temp_right_d_f;
+	this->_right_d_f = temp_front_l_d;
+	this->_right_d_b = temp_front_r_d;
+}
+
+void Cube::_spin_d_cc() {
+	t_color temp_down_l_b = this->_down_l_b;
+	t_color temp_down_r_b = this->_down_r_b;
+	t_color temp_down_l_f = this->_down_l_f;
+	t_color temp_down_r_f = this->_down_r_f;
+	t_color temp_front_l_d = this->_front_l_d;
+	t_color temp_front_r_d = this->_front_r_d;
+	t_color temp_left_d_f = this->_left_d_f;
+	t_color temp_left_d_b = this->_left_d_b;
+	t_color temp_back_l_d = this->_back_l_d;
+	t_color temp_back_r_d = this->_back_r_d;
+	t_color temp_right_d_f = this->_right_d_f;
+	t_color temp_right_d_b = this->_right_d_b;
+
+	this->_down_l_b = temp_down_l_f;
+	this->_down_r_b = temp_down_l_b;
+	this->_down_l_f = temp_down_r_f;
+	this->_down_r_f = temp_down_r_b;
+	this->_front_l_d = temp_right_d_f;
+	this->_front_r_d = temp_right_d_b;
+	this->_left_d_f = temp_front_l_d;
+	this->_left_d_b = temp_front_r_d;
+	this->_back_l_d = temp_left_d_f;
+	this->_back_r_d = temp_left_d_b;
+	this->_right_d_f = temp_back_r_d;
+	this->_right_d_b = temp_back_l_d;
+}
+
+void Cube::_spin_f_c() {
+	t_color temp_front_l_u = this->_front_l_u;
+	t_color temp_front_r_u = this->_front_r_u;
+	t_color temp_front_l_d = this->_front_l_d;
+	t_color temp_front_r_d = this->_front_r_d;
+	t_color temp_up_l_f = this->_up_l_f;
+	t_color temp_up_r_f = this->_up_r_f;
+	t_color temp_down_l_f = this->_down_l_f;
+	t_color temp_down_r_f = this->_down_r_f;
+	t_color temp_right_u_f = this->_right_u_f;
+	t_color temp_right_d_f = this->_right_d_f;
+	t_color temp_left_u_f = this->_left_u_f;
+	t_color temp_left_d_f = this->_left_d_f;
+
+	this->_front_l_u = temp_front_l_d;
+	this->_front_r_u = temp_front_l_u;
+	this->_front_l_d = temp_front_r_d;
+	this->_front_r_d = temp_front_r_u;
+	this->_up_l_f = temp_left_d_f;
+	this->_up_r_f = temp_left_u_f;
+	this->_down_l_f = temp_right_d_f;
+	this->_down_r_f = temp_right_u_f;
+	this->_right_u_f = temp_up_l_f;
+	this->_right_d_f = temp_up_r_f;
+	this->_left_u_f = temp_down_l_f;
+	this->_left_d_f = temp_down_r_f;
+}
+
+void Cube::_spin_f_cc() {
+	t_color temp_front_l_u = this->_front_l_u;
+	t_color temp_front_r_u = this->_front_r_u;
+	t_color temp_front_l_d = this->_front_l_d;
+	t_color temp_front_r_d = this->_front_r_d;
+	t_color temp_up_l_f = this->_up_l_f;
+	t_color temp_up_r_f = this->_up_r_f;
+	t_color temp_down_l_f = this->_down_l_f;
+	t_color temp_down_r_f = this->_down_r_f;
+	t_color temp_right_u_f = this->_right_u_f;
+	t_color temp_right_d_f = this->_right_d_f;
+	t_color temp_left_u_f = this->_left_u_f;
+	t_color temp_left_d_f = this->_left_d_f;
+
+	this->_front_l_u = temp_front_r_u;
+	this->_front_r_u = temp_front_r_d;
+	this->_front_l_d = temp_front_l_u;
+	this->_front_r_d = temp_front_l_d;
+	this->_up_l_f = temp_right_u_f;
+	this->_up_r_f = temp_right_d_f;
+	this->_down_l_f = temp_left_u_f;
+	this->_down_r_f = temp_left_d_f;
+	this->_right_u_f = temp_down_r_f;
+	this->_right_d_f = temp_down_l_f;
+	this->_left_u_f = temp_up_r_f;
+	this->_left_d_f = temp_up_l_f;
+}
+
+void Cube::_spin_b_c() {
+	t_color temp_back_l_u = this->_back_l_u;
+	t_color temp_back_r_u = this->_back_r_u;
+	t_color temp_back_l_d = this->_back_l_d;
+	t_color temp_back_r_d = this->_back_r_d;
+	t_color temp_up_l_b = this->_up_l_b;
+	t_color temp_up_r_b = this->_up_r_b;
+	t_color temp_down_l_b = this->_down_l_b;
+	t_color temp_down_r_b = this->_down_r_b;
+	t_color temp_right_u_b = this->_right_u_b;
+	t_color temp_right_d_b = this->_right_d_b;
+	t_color temp_left_u_b = this->_left_u_b;
+	t_color temp_left_d_b = this->_left_d_b;
+
+	this->_back_l_u = temp_back_r_u;
+	this->_back_r_u = temp_back_r_d;
+	this->_back_l_d = temp_back_l_u;
+	this->_back_r_d = temp_back_l_d;
+	this->_up_l_b = temp_right_u_b;
+	this->_up_r_b = temp_right_d_b;
+	this->_down_l_b = temp_left_u_b;
+	this->_down_r_b = temp_left_d_b;
+	this->_right_u_b = temp_down_r_b;
+	this->_right_d_b = temp_down_l_b;
+	this->_left_u_b = temp_up_r_b;
+	this->_left_d_b = temp_up_l_b;
+}
+
+void Cube::_spin_b_cc() {
+	t_color temp_back_l_u = this->_back_l_u;
+	t_color temp_back_r_u = this->_back_r_u;
+	t_color temp_back_l_d = this->_back_l_d;
+	t_color temp_back_r_d = this->_back_r_d;
+	t_color temp_up_l_b = this->_up_l_b;
+	t_color temp_up_r_b = this->_up_r_b;
+	t_color temp_down_l_b = this->_down_l_b;
+	t_color temp_down_r_b = this->_down_r_b;
+	t_color temp_right_u_b = this->_right_u_b;
+	t_color temp_right_d_b = this->_right_d_b;
+	t_color temp_left_u_b = this->_left_u_b;
+	t_color temp_left_d_b = this->_left_d_b;
+
+	this->_back_l_u = temp_back_l_d;
+	this->_back_r_u = temp_back_l_u;
+	this->_back_l_d = temp_back_r_d;
+	this->_back_r_d = temp_back_r_u;
+	this->_up_l_b = temp_left_d_b;
+	this->_up_r_b = temp_left_u_b;
+	this->_down_l_b = temp_right_d_b;
+	this->_down_r_b = temp_right_u_b;
+	this->_right_u_b = temp_up_l_b;
+	this->_right_d_b = temp_up_r_b;
+	this->_left_u_b = temp_down_l_b;
+	this->_left_d_b = temp_down_r_b;
+}
+
+void Cube::_spin_l_c() {
+	t_color temp_left_u_f = this->_left_u_f;
+	t_color temp_left_u_b = this->_left_u_b;
+	t_color temp_left_d_f = this->_left_d_f;
+	t_color temp_left_d_b = this->_left_d_b;
+	t_color temp_up_r_b = this->_up_r_b;
+	t_color temp_up_r_f = this->_up_r_f;
+	t_color temp_front_r_u = this->_front_r_u;
+	t_color temp_front_r_d = this->_front_r_d;
+	t_color temp_down_r_b = this->_down_r_b;
+	t_color temp_down_r_f = this->_down_r_f;
+	t_color temp_back_r_u = this->_back_r_u;
+	t_color temp_back_r_d = this->_back_r_d;
+
+	this->_left_u_f = temp_left_u_b;
+	this->_left_d_f = temp_left_u_f;
+	this->_left_d_b = temp_left_d_f;
+	this->_left_u_b = temp_left_d_b;
+	this->_up_r_b = temp_back_r_d;
+	this->_up_r_f = temp_back_r_u;
+	this->_front_r_u = temp_up_r_b;
+	this->_front_r_d = temp_up_r_f;
+	this->_down_r_b = temp_front_r_d;
+	this->_down_r_f = temp_front_r_u;
+	this->_back_r_u = temp_down_r_b;
+	this->_back_r_d = temp_down_r_f;
+}
+
+void Cube::_spin_l_cc() {
+	t_color temp_left_u_f = this->_left_u_f;
+	t_color temp_left_u_b = this->_left_u_b;
+	t_color temp_left_d_f = this->_left_d_f;
+	t_color temp_left_d_b = this->_left_d_b;
+	t_color temp_up_r_b = this->_up_r_b;
+	t_color temp_up_r_f = this->_up_r_f;
+	t_color temp_front_r_u = this->_front_r_u;
+	t_color temp_front_r_d = this->_front_r_d;
+	t_color temp_down_r_b = this->_down_r_b;
+	t_color temp_down_r_f = this->_down_r_f;
+	t_color temp_back_r_u = this->_back_r_u;
+	t_color temp_back_r_d = this->_back_r_d;
+
+	this->_left_u_f = temp_left_d_f;
+	this->_left_d_f = temp_left_d_b;
+	this->_left_d_b = temp_left_u_b;
+	this->_left_u_b = temp_left_u_f;
+	this->_up_r_b = temp_front_r_u;
+	this->_up_r_f = temp_front_r_d;
+	this->_front_r_u = temp_down_r_f;
+	this->_front_r_d = temp_down_r_b;
+	this->_down_r_b = temp_back_r_u;
+	this->_down_r_f = temp_back_r_d;
+	this->_back_r_u = temp_up_r_f;
+	this->_back_r_d = temp_up_r_b;
+}
+
+void Cube::_spin_r_c() {
+	t_color temp_right_u_f = this->_right_u_f;
+	t_color temp_right_u_b = this->_right_u_b;
+	t_color temp_right_d_f = this->_right_d_f;
+	t_color temp_right_d_b = this->_right_d_b;
+	t_color temp_up_r_b = this->_up_r_b;
+	t_color temp_up_r_f = this->_up_r_f;
+	t_color temp_front_r_u = this->_front_r_u;
+	t_color temp_front_r_d = this->_front_r_d;
+	t_color temp_down_r_b = this->_down_r_b;
+	t_color temp_down_r_f = this->_down_r_f;
+	t_color temp_back_r_u = this->_back_r_u;
+	t_color temp_back_r_d = this->_back_r_d;
+
+	this->_right_u_f = temp_right_d_f;
+	this->_right_d_f = temp_right_d_b;
+	this->_right_d_b = temp_right_u_b;
+	this->_right_u_b = temp_right_u_f;
+	this->_up_r_b = temp_front_r_u;
+	this->_up_r_f = temp_front_r_d;
+	this->_front_r_u = temp_down_r_f;
+	this->_front_r_d = temp_down_r_b;
+	this->_down_r_b = temp_back_r_u;
+	this->_down_r_f = temp_back_r_d;
+	this->_back_r_u = temp_up_r_f;
+	this->_back_r_d = temp_up_r_b;
+}
+
+void Cube::_spin_r_cc() {
+	t_color temp_right_u_f = this->_right_u_f;
+	t_color temp_right_u_b = this->_right_u_b;
+	t_color temp_right_d_f = this->_right_d_f;
+	t_color temp_right_d_b = this->_right_d_b;
+	t_color temp_up_r_b = this->_up_r_b;
+	t_color temp_up_r_f = this->_up_r_f;
+	t_color temp_front_r_u = this->_front_r_u;
+	t_color temp_front_r_d = this->_front_r_d;
+	t_color temp_down_r_b = this->_down_r_b;
+	t_color temp_down_r_f = this->_down_r_f;
+	t_color temp_back_r_u = this->_back_r_u;
+	t_color temp_back_r_d = this->_back_r_d;
+
+	this->_right_u_f = temp_right_u_b;
+	this->_right_d_f = temp_right_u_f;
+	this->_right_d_b = temp_right_d_f;
+	this->_right_u_b = temp_right_d_b;
+	this->_up_r_b = temp_back_r_d;
+	this->_up_r_f = temp_back_r_u;
+	this->_front_r_u = temp_up_r_b;
+	this->_front_r_d = temp_up_r_f;
+	this->_down_r_b = temp_front_r_d;
+	this->_down_r_f = temp_front_r_u;
+	this->_back_r_u = temp_down_r_b;
+	this->_back_r_d = temp_down_r_f;
+}

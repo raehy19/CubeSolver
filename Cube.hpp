@@ -69,12 +69,6 @@ private:
 
 	void _spin_r_cc(void);
 
-	void _spin_u2(void);
-
-	void _spin_d2(void);
-
-	void _spin_l2(void);
-
 public:
 	// Orthodox Canonical
 	Cube();
