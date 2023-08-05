@@ -1,12 +1,23 @@
 #include "Cube.hpp"
 
 int main(int argc, char **argv) {
-	(void) argc;
-	(void) argv;
+  (void)argc;
+  (void)argv;
 
-	Cube cube;
+  Cube cube;
 
-	cube.Display();
+  cube.Display();
 
-	return (0);
+  cube.Spin("uc");
+  cube.Display();
+
+  cube.Spin("ucc");
+  cube.Display();
+
+  cube.Spin("dc");
+  cube.Display();
+
+  cube.Spin("dcc");
+  cube.Display();
+  return (0);
 }
