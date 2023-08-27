@@ -7,6 +7,7 @@ CXXFLAGS := -Wall -Wextra -Werror -MMD -MP -O3
 RM := rm -f
 
 all : $(NAME)
+	./solve
 
 SRCS := \
 	Cube.cpp \

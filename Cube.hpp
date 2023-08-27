@@ -75,11 +75,11 @@ public:
   // Display
   void Display(void);
 
-  // Spin Select
-  void Spin(std::string direction);
-
   // Check
   bool Check(void);
+
+  // Spin Select
+  void Spin(std::string direction);
 };
 
 #endif

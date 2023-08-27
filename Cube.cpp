@@ -49,6 +49,35 @@ void Cube::Display() {
   std::cout << ":::::::::::::::::::::::" << std::endl;
 }
 
+// Check
+bool Cube::Check() {
+  if ( // up
+      this->_up_l_b != this->_up_r_b || this->_up_l_b != this->_up_l_f ||
+      this->_up_l_b != this->_up_r_f ||
+      // down
+      this->_down_l_b != this->_down_r_b ||
+      this->_down_l_b != this->_down_l_f ||
+      this->_down_l_b != this->_down_r_f ||
+      // front
+      this->_front_l_u != this->_front_r_u ||
+      this->_front_l_u != this->_front_l_d ||
+      this->_front_l_u != this->_front_r_d ||
+      // back
+      this->_back_l_u != this->_back_r_u ||
+      this->_back_l_u != this->_back_l_d ||
+      this->_back_l_u != this->_back_r_d ||
+      // left
+      this->_left_u_f != this->_left_u_b ||
+      this->_left_u_f != this->_left_d_f ||
+      this->_left_u_f != this->_left_d_b ||
+      // right
+      this->_right_u_f != this->_right_u_b ||
+      this->_right_u_f != this->_right_d_f ||
+      this->_right_u_f != this->_right_d_b)
+    return false;
+  return true;
+}
+
 // Spin
 void Cube::_spin_u_c() {
   t_color temp_up_l_b = this->_up_l_b;
