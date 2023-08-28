@@ -49,8 +49,8 @@ void Cube::Display() {
   std::cout << ":::::::::::::::::::::::" << std::endl;
 }
 
-// Check
-bool Cube::Check() {
+// IsSolved : is Cube Solved
+bool Cube::IsSolved() {
   if ( // up
       this->_up_l_b != this->_up_r_b || this->_up_l_b != this->_up_l_f ||
       this->_up_l_b != this->_up_r_f ||

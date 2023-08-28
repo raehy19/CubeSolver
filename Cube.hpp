@@ -75,8 +75,8 @@ public:
   // Display
   void Display(void);
 
-  // Check
-  bool Check(void);
+  // IsSolved : is Cube Solved
+  bool IsSolved(void);
 
   // Spin Select
   void Spin(std::string direction);
